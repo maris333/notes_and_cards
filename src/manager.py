@@ -13,9 +13,10 @@ class Manager:
         while True:
             try:
                 choice = int(self.menu.get_choice())
-                self._execute(choice)
             except ValueError:
                 self._show_error()
+            else:
+                self._execute(choice)
 
     @staticmethod
     def _show_error():
