@@ -1,11 +1,11 @@
-from src.cards_sub_manager_factory import CardsSubManagerFactory
-from src.notes_sub_manager_factory import NotesSubManagerFactory
+from src.cards_sub_manager import CardsSubManager
+from src.notes_sub_manager import NotesSubManager
 
 
 class Executor:
     def __init__(self):
-        self.notes_manager = NotesSubManagerFactory().create_sub_manager()
-        self.cards_manager = CardsSubManagerFactory().create_sub_manager()
+        self.notes_manager = NotesSubManager()
+        self.cards_manager = CardsSubManager()
 
     def add_note(self):
         note = input("Add note: ")
